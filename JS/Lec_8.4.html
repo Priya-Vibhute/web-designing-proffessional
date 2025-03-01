@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="display()">click</button>
+    <button onclick="clickToOpen()">Open window</button>
+
+    <script>
+        const result=window.confirm("XYZ")
+        console.log(result)
+
+        console.log("something went wrong")
+        console.log(window.history)
+        document.write(window.history.length)
+
+
+        function display()
+        {
+            window.history.go(-2)
+        }
+
+        function clickToOpen()
+        {
+            window.open()
+        }
+
+
+    </script>
+    
+</body>
+</html>

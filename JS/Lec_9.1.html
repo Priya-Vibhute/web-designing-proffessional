@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="doReload()">Click</button>
+    <script>
+
+       const loc= window.location;
+       console.log(loc.port)
+       console.log(loc.host)
+       console.log(loc.href)
+       console.log(loc.hash)
+       
+
+       function doReload()
+       {
+          loc.reload()
+       }
+
+       window.onerror=function(a,b,c,d,e)
+       {
+          console.log("a",a)
+          console.log("b",b)
+          console.log("c",c)
+          console.log("d",d)
+          console.log("e",e)
+
+          return false;
+       }
+
+       const a=78;
+       a=89;
+
+      
+
+    </script>
+    
+</body>
+</html>

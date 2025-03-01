@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container,
+        .box,
+        .heading {
+            border: 2px solid black;
+        }
+
+        .container {
+            width: 100%;
+            height: 300px;
+            background-color: palegoldenrod;
+        }
+
+        .box {
+            width: 70%;
+            height: 200px;
+            background-color: rgb(208, 235, 221);
+        }
+
+        .heading {
+            width: 50%;
+            height: 150px;
+            background-color: rgb(229, 226, 241);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <h1 class="heading">Heading</h1>
+        </div>
+    </div>
+
+    <h1 id="heading"></h1>
+
+    <script>
+
+        
+     window.addEventListener("online",()=>{
+            console.log("Online")
+            document.getElementById("heading").innerText="You are online";
+         })
+
+         window.addEventListener("offline",()=>{
+            document.getElementById("heading").innerText="You are offline";
+         })
+
+
+        document.querySelector(".container").addEventListener("click", () => { alert("container") })
+        document.querySelector(".box").addEventListener("click", () => { alert("box") })
+        document.querySelector(".heading").addEventListener("click", (e) => { 
+            e.stopPropagation();
+            alert("heading")
+         })
+
+      
+
+    </script>
+
+</body>
+
+</html>

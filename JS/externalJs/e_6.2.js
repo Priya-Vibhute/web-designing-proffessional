@@ -59,5 +59,4 @@ for(let key in laptop)
 category["products"].forEach((product)=>{
     console.log(product.id,product.model,product.price)
     
-
 })
